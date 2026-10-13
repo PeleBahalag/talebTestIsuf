@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>בוחן ולמידה- יסודות מנצחים</title>
+
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <img class="navbar" src="assets/elements/logos.png" alt="icon 1">
+
+    <!-- overlay כהה -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- POPUP -->
+    <div id="popup" class="popup">
+
+        <img class="popUpbg" src="assets/elements/popUpBG.png" alt="popup bg">
+
+        <p id="popupText" class="popUpText"></p>
+
+        <img 
+            class="popUpClose" 
+            src="assets/buttons/popUpClose.png" 
+            alt="close"
+            onclick="closePopup()"
+        >
+
+    </div>
+ <!-- question counter -->
+<div class="questionCounter">
+    <span id="currentQuestion">1</span>/<span id="totalQuestions">15</span>
+</div>
+
+<!-- question -->
+<h1 class="questionTitle" id="questionText">
+    השאלה
+</h1>
+
+<!-- answers -->
+<div class="answersContainer" id="answersContainer"></div>
+
+<!-- next button -->
+ <!-- <div class="nextBtn" onclick="nextQuestion()">
+    <img src="assets/buttons/nextBtn.png"  alt="start button">
+  </div> -->
+<script src="main.js"></script>
+
+
+<script>
+
+const userData = JSON.parse(localStorage.getItem("userData"));
+
+const role = userData.role;
+
+const quiz = quizData[role];
+
+openPopup(quiz.popupText);
+
+</script>
+
+<style>
+
+    body {
+    background-image: url("assets/backgrounds/plainBg.png");
+}
+
+
+</style>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init("EpaOeeO37lgg5m9SS");
+</script>
+</html>

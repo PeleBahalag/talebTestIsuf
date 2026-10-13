@@ -1,0 +1,905 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url("assets/images/background-img.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    direction: ltr;
+    font-family: "yarden";
+}
+
+/* ---------------- FONT ---------------- */
+@font-face {
+    font-family: "yarden";
+    src: url("assets/font/Heebo-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "BOLD";
+    src: url("assets/font/gadi-almog-regular-aaa.otf");
+} 
+
+.navbar {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 95%;
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    position: absolute;
+    font-size: 8vmin;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.subtitle {
+    position: absolute;
+    font-size: 4vmin;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.byGuylee{
+    position: absolute;
+    top:95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000000;
+}
+
+.buttonT {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translate(-50%);
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    touch-action: manipulation;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.buttonT:hover {
+    transform: translateX(-50%) scale(1.1);
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.8));
+}
+
+.buttonT:active {
+    transform: translateX(-50%) scale(0.95);
+}
+
+.buttonS {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    left: 75%;
+    transform: translate(-50%);
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    touch-action: manipulation;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.buttonS:hover {
+    transform: translateX(-50%) scale(1.1);
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.8));
+}
+
+.buttonS:active {
+    transform: translateX(-50%) scale(0.95);
+}
+
+.button {
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%);
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    touch-action: manipulation;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.button:hover {
+    transform: translateX(-50%) scale(1.1);
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.8));
+}
+
+.button:active {
+    transform: translateX(-50%) scale(0.95);
+}
+
+.userForm{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "yarden";
+
+    width: 100vw;
+    max-width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.topInputs{
+    display: flex;
+    gap: 12px;
+
+    width: 95vw;
+    max-width: 600px;   /* חשוב לרספונסיביות */
+
+    margin: 0 auto;     /* מרכז אופקית */
+}
+
+/* input */
+.userForm input{
+    flex: 1;
+    height: 5vh;
+    border: none;
+    border-radius: 12px;
+
+    background-color: rgba(234, 186, 107, 0.7); /* ✅ 70% */
+    color: #03255A;
+
+    padding-right: 12px;
+    text-align: right; /* ✅ כתיבה מימין */
+
+    font-family: "yarden";
+    font-size: 1rem;
+    box-shadow: 0 5px 12px rgba(1, 9, 22, 0.35);
+    outline: none;
+}
+
+/* placeholder לימין */
+.userForm input::placeholder{
+    text-align: right;
+    color: #03255A;
+    opacity: 1;
+}
+
+.checkBtn {
+    
+    border: none;
+    border-radius: 12px;
+
+    background-color: rgba(234, 186, 107, 0.7);
+    color: #03255A;
+
+    padding: 0 40px 0 15px; /* מקום לחץ */
+    text-align: right;
+
+    font-family: "yarden";
+    font-size: 1rem;
+
+    box-shadow: 0 5px 12px rgba(3,37,90,0.35);
+    outline: none;
+    cursor: pointer;
+}
+
+/* dropdown */
+.userForm select{
+    width: 50%;
+    height: 45px;
+
+    border: none;
+    border-radius: 12px;
+
+    background-color: rgba(234, 186, 107, 0.7);
+    color: #03255A;
+
+    padding: 0 40px 0 15px; /* מקום לחץ */
+    text-align: right;
+
+    font-family: "yarden";
+    font-size: 1rem;
+
+    box-shadow: 0 5px 12px rgba(3,37,90,0.35);
+    outline: none;
+    cursor: pointer;
+
+    /* ❗ מבטל לגמרי עיצוב דפדפן */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    /* ❗ מסיר outline בפוקוס בדפדפנים מסוימים */
+    border: none;
+}
+
+/* ❗ מסיר קו שחור בפוקוס (הכי חשוב) */
+.userForm select:focus{
+    outline: none;
+    box-shadow: 0 5px 14px rgba(3,37,90,0.5);
+}
+
+/* חץ custom */
+.userForm select{
+    background-image: url("assets/elements/dropDown.png");
+    background-repeat: no-repeat;
+    background-position: left 10px center;
+    background-size: 10vw;
+        border-radius: 12px;
+    overflow: hidden; /* עוזר לעיגול */
+} 
+
+/* עוטף את ה-dropdown */
+.selectWrapper{
+    position: relative;
+    width: 55%;
+}
+
+/* החץ */
+.selectWrapper::after{
+    content: "⌄";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+
+    color: #03255A;
+    font-size: 18px;
+} 
+/* hover עדין */
+.userForm select:hover{
+    box-shadow: 0 6px 14px rgba(3,37,90,0.5);
+}
+.dropdownRow{
+    display: flex;
+    gap: 12px;
+
+    width: 95vw;
+    max-width: 600px;
+
+    margin: 0 auto;
+}
+
+/* כל dropdown יתפוס חצי */
+.dropdown{
+    flex: 1;
+}
+
+/* הספר */
+.bookSubmit{
+    width: 40vw;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bookSubmit:hover{
+    transform: scale(1.08);
+}
+
+.bookSubmit:active{
+    transform: scale(0.95);
+}
+
+.userForm input:focus,
+.userForm select:focus{
+    box-shadow: 0 0 0 2px rgba(3,37,90,0.2);
+}
+
+/* dropdown container */
+/* dropdown container */
+.dropdown {
+  width: 50%;
+  position: relative;
+}
+
+.dropdownSelected {
+  width: 100%;
+  padding: 12px 40px 12px 20px; /* מקום לחץ משמאל */
+
+  border-radius: 12px;
+  box-sizing: border-box;
+
+  background: rgba(234, 186, 107, 0.7);
+  color: #03255A;
+
+  direction: left;              /* 🔥 הכי חשוב */
+  text-align: left;
+
+  font-size: 1rem;
+  font-family: "yarden";
+
+  box-shadow: 0 5px 12px rgba(3,37,90,0.35);
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;   /* 🔥 דוחף הכל לימין */
+
+  position: relative;
+}
+
+/* החץ משמאל */
+.dropdownSelected::after{
+    content: ""; /* ❗ חובה */
+
+    position: absolute;
+    left: 12px; /* 👈 צד שמאל */
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 18px;
+    height: 18px;
+
+    background-image: url("assets/elements/dropDown.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    pointer-events: none;
+}
+
+/* רשימה */
+.dropdownList {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+
+  width: 100%;
+  background: rgba(234, 186, 107, 0.95);
+
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+/* פריט */
+.dropdownItem {
+  padding: 12px;
+  cursor: pointer;
+
+  text-align: right;
+  color: #03255A;
+  font-family: "yarden";
+}
+
+/* hover */
+.dropdownItem:hover {
+  background: #03255A;
+  color: #EABA6B;
+}
+
+.sub1, .sub2, .sub3, .sub4, .sub5 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 32vw;
+
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    touch-action: manipulation;
+
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.sub1:active,
+.sub2:active,
+.sub3:active,
+.sub4:active,
+.sub5:active {
+    transform: translate(-50%, -50%) scale(0.92); /* 👈 התכווצות */
+    filter: brightness(0.85); /* 👈 כהה קצת */
+}
+
+.sub1:active,
+.sub2:active,
+.sub3:active,
+.sub4:active,
+.sub5:active {
+    transform: translate(-50%, -50%) scale(0.9);
+    filter: brightness(0.8);
+} 
+.sub1 {
+    position: absolute;
+    top: 25%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 32vw;
+}
+
+.sub2 {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 32vw;
+}
+
+.sub3 {
+    position: absolute;
+    top: 55%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 32vw;
+}
+
+.sub4 {
+    position: absolute;
+    top: 55%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 32vw;
+}
+
+.sub5 {
+    position: absolute;
+    top: 85%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 32vw;
+}
+
+.test {
+    cursor: pointer;
+    position: absolute;
+    top: 69%;
+    left: 30%;
+    transform: translate(-50%);
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    touch-action: manipulation;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.test:hover {
+    transform: translateX(-50%) scale(1.1);
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.8));
+}
+
+.test:active {
+    transform: translateX(-50%) scale(0.95);
+}
+
+.test img {
+    width: 30vw;
+}
+
+.popUpbg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+}
+
+.popUpClose {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.6);
+    z-index: 999;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+/* הרקע שלך */
+.popUpbg {
+    width: 85vw;
+    height: 70vh;
+}
+
+/* טקסט על התמונה */
+.popUpText {
+    position: absolute;
+    top: 3vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    direction: rtl;
+    width: 75vw;
+    text-align: center;
+    z-index: 10000000;
+    font-family: "yarden";
+    color: #03255A;
+    font-size: 1.2rem;
+}
+
+/* כפתור סגירה כתמונה */
+.popUpClose {
+    position: absolute;
+    top: 25vh;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 35vw;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.popUpClose:active {
+    transform: translateX(-50%) scale(0.9);
+}
+
+.allSub {
+    position: absolute;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    cursor: pointer;
+    width: 95%;
+    transform: translate(-50%, -50%);
+}
+
+.forwordBtn {
+    position: absolute;
+    position: absolute;
+    top: 85%;
+    left: 10%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+.backBtn {
+    position: absolute;
+    position: absolute;
+    top: 85%;
+    left: 90%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+.textBg {
+    position: absolute;
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    width: 70vw;
+    transform: translate(-50%, -50%);
+}
+
+.text {
+    position: absolute;
+    text-align: right;
+    top: 55%;
+    left: 50%;
+    width: 68vw;
+    transform: translate(-50%, -50%);
+    font-family: "yarden";
+    color: #03255A;
+    font-size: 1rem;
+    direction: rtl;
+}
+
+.innerTitle {
+    position: absolute;
+    text-align: center;
+    top: 21%;
+    left: 50%;
+    width: 100vw;
+    transform: translate(-50%, -50%);
+    font-family: "BOLD";
+    color: #03255A;
+    font-size: 1.5rem;
+    direction: rtl;
+}
+
+.options {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.options button {
+  background: #ddf3ff;
+    color: #03255A;
+
+  border: none;              /* מוריד מסגרת */
+  outline: none;             /* מוריד outline */
+  box-shadow: none;          /* מוריד הילה/צל */
+  width: 60vw;
+  border-radius: 14px;
+  /* padding: 12px 24px; */
+  font-size: 1.2rem;
+  font-family: "BOLD";
+  direction: rtl;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.options button:hover {
+  background: rgba(234, 186, 107, 0.9);
+  color: #03255A;
+}
+
+
+.questionCounter {
+    position: absolute;
+    top: 9%;
+    left: 75%;
+    background-color: rgba(234, 186, 107, 0.7);
+    color: #03255A;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+
+    font-family: "BOLD";
+    box-shadow: 0 4px 12px rgba(3, 37, 90, 0.35);
+}
+
+/* title */
+.questionTitle {
+    position: absolute;
+    text-align: center;
+    margin-top: 16vh;
+      left: 50%;
+  transform: translateX(-50%);
+    color: #03255A;
+    font-family: "BOLD";
+    width: 95vw;
+    row-gap: 1vh;
+    font-weight: lighter;
+    font-size: 1.4rem;
+    direction: rtl;
+}
+
+/* answers */
+.answersContainer {
+    position: absolute;
+    width: 100vw;
+    top: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "yarden";
+    gap: 4vh;
+}
+
+
+/* button */
+.answerBtn {
+    width: 87vw;
+    height: 9vh;
+    background-color: rgba(234, 186, 107, 0.7);
+    color: #03255A;
+    border: none;
+    transition: 0.3s;
+    font-size: 1rem;
+    direction: rtl;
+
+}
+.answersContainer button {
+    border-radius: 16px;        /* פינות מעוגלות */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* צל */
+    border: none;              /* מוריד מסגרת ברירת מחדל */
+    padding:5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* אפקט מעבר נחמד כשעוברים עם עכבר */
+.answersContainer button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* correct */
+.correct {
+background-color: rgba(3, 90, 16, 0.5);
+    color: rgb(255, 246, 227);
+}
+
+/* wrong */
+.wrong {
+background-color: rgba(163, 11, 13, 0.5);
+    color: rgb(255, 246, 227);
+}
+
+/* disable clicks */
+.disabled {
+    pointer-events: none;
+}
+
+/* next button */
+.nextBtn img{
+    position: absolute;
+    top: 83%;
+    left: 3%;
+    width: 22vw;
+    cursor: pointer;
+}
+
+.smallQuestion {
+    font-size:1rem;
+
+}
+
+.answerBtn.selected {
+    color: #111;
+    border: 2px solid white;
+    transform: scale(1.03);
+    position: relative;
+}
+
+/* וי קטן */
+.answerBtn.selected::after {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+
+    width: 26px;
+    height: 26px;
+
+    border-radius: 50%;
+
+    color: #03255A;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+#overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 998;
+    display: none;
+}
+
+/* =========================
+   END POPUP
+========================= */
+
+.endPopup {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 40vw;
+
+    background-image: url("assets/backgrounds/popupBg.png");
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 2vw;
+
+    padding: 3vw;
+
+    z-index: 999;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    animation: popupAnim 0.4s ease;
+}
+
+.popupTitleImg {
+    width: 18vw;
+    margin-bottom: 1vw;
+}
+
+.endTitle {
+    color: white;
+    font-size: 2vw;
+    margin-bottom: 1vw;
+}
+
+.endScore {
+    color: white;
+    font-size: 1.5vw;
+    line-height: 2.5vw;
+}
+
+.endScore span {
+    font-size: 2.3vw;
+    font-family: "BOLD";
+    color: #FFD54A;
+}
+
+.backBtn {
+    margin-top: 2vw;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+.backBtn img {
+    width: 10vw;
+
+    transition: 0.3s;
+}
+
+.backBtn img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes popupAnim {
+
+    from {
+        opacity: 0;
+        transform: translate(-50%, -45%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.endText span {
+    color: #03255A;
+    font-size: 3rem;
+    font-family: "BOLD";
+}
+
+.popUpTextEnd {
+    position: absolute;
+    top: 0vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    direction: rtl;
+    width: 80vw;
+    text-align: center;
+    z-index: 10000000;
+   color: #03255A;
+    font-size: 2rem;
+    font-family: "BOLD";
+}
+
+.retryText {
+    position: absolute;
+    top: 17vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000000000000;
+    font-size: 1rem;
+    font-family: "yarden";
+ width: 85vw;
+    color: #03255A;
+
+    text-align: center;
+}
