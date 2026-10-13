@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>בוחן ולמידה - יסודות מנצחים</title>
+
+  <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+    <img class="navbar" src="assets/elements/logos.png" alt="icon 1">
+
+    <img class="title" src="assets/titles/personalnfoT.png" alt="icon 1">
+
+<form class="userForm" id="userForm">
+
+
+
+    <div class="topInputs">
+
+        <input type="number" id="personalNumber" placeholder="מספר אישי" required>
+
+        <input type="text" id="fullName" placeholder="שם מלא" required>
+
+        
+
+    </div>
+
+
+
+<div class="dropdownRow">
+
+
+
+  <div class="dropdown" id="roleDropdown">
+
+    <div class="dropdownSelected">מחלקה</div>
+
+    <div class="dropdownList">
+
+      <div class="dropdownItem">1</div>
+
+      <div class="dropdownItem">2</div>
+
+      <div class="dropdownItem">3</div>
+
+      <div class="dropdownItem">4</div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="dropdown" id="branchDropdown">
+
+    <div class="dropdownSelected">פלוגה</div>
+
+    <div class="dropdownList">
+      <div class="dropdownItem">אומץ</div>
+      <div class="dropdownItem">ברק</div>
+      <div class="dropdownItem">גולן</div>
+      <div class="dropdownItem">דביר</div>
+      <div class="dropdownItem">הראל</div>
+      <div class="dropdownItem">ונוס</div>
+    </div>
+
+  </div>
+
+
+
+</div>
+
+    <!-- הספר = כפתור -->
+
+    <img src="assets/buttons/startBtn.png" class="bookSubmit"  onclick="submitForm()">
+
+
+
+</form>
+
+
+
+<script src="main.js"></script>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+  emailjs.init("EpaOeeO37lgg5m9SS");
+
+</script>
+
+<script>  
+
+
+
+</script> 
+
+<style>
+
+    body {
+
+    background-image: url("assets/backgrounds/plainBg.png");
+
+}
+
+</style>
+
+</html>
+
