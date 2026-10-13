@@ -3,12 +3,19 @@
 // -----------------------------
 
 const titles = {
-    sub1: "assets/titles/sub1.png",
-    sub2: "assets/titles/sub2.png",
-    sub3: "assets/titles/sub3.png",
-    sub4: "assets/titles/sub4.png",
-    sub5: "assets/titles/sub5.png"
+    sub1: "תכנית הכשרה",
+    sub2: "ניהול הדרכה",
+    sub3: "חניכים בהכשרה",
+    sub4: "סגל ההכשרה",
+    sub5: "סביבת הכשרה"
 };
+
+const selectedSub = localStorage.getItem("selectedSub");
+const titleElement = document.getElementById("pageTitle");
+
+if (titleElement && titles[selectedSub]) {
+    titleElement.textContent = titles[selectedSub];
+}
 
 const texts = {
     sub2: [
@@ -20,11 +27,11 @@ const texts = {
             title: "לחץ על הנוהל עליו תרצה ללמוד",
             content: "",
             options: [
-        { text: "1.2- שעון פעילות", goTo: 2 },
-        { text: "1.5- תקופת התארגנות", goTo: 3 },
-        { text: "1.6- סיכומים עיתיים במהלך ההכשרה", goTo: 6 },
-        { text: "1.7-תקופת ההדרכה", goTo: 9 },
-        { text: "1.10- ניהול מידע הדרכתי", goTo: 23 },
+        { text: "1.2 - שעון פעילות", goTo: 2 },
+        { text: "1.5 - תקופת התארגנות", goTo: 3 },
+        { text: "1.6 - סיכומים עיתיים במהלך ההכשרה", goTo: 6 },
+        { text: "1.7 - תקופת ההדרכה", goTo: 9 },
+        { text: "1.10 - ניהול מידע הדרכתי", goTo: 23 },
         { text: "1.11- ניהול הכשרה בקמפוס הדיגיטלי", goTo: 26 }
     ]
         },

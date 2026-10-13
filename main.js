@@ -535,6 +535,5 @@ function showFinalPopup() {
 
 /* מעבר חזרה */
 function goBackToLearning() {
-
     window.location.href = "index.html";
 }
