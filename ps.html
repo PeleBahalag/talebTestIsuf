@@ -1,70 +1,34 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>בוחן ולמידה - יסודות מנצחים</title>
   <link rel="icon" type="image/png" href="assets/images/books.svg">
-
   <link rel="stylesheet" href="index.css">
-
 </head>
 
 <body>
-
-    <img class="navbar" src="assets/elements/logos.png" alt="icon 1">
-
-    <img class="title" src="assets/titles/personalnfoT.png" alt="icon 1">
-
-<form class="userForm" id="userForm">
-
-
-
-    <div class="topInputs">
-
-        <input type="number" id="personalNumber" placeholder="מספר אישי" required>
-
-        <input type="text" id="fullName" placeholder="שם מלא" required>
-
-        
-
-    </div>
-
-
-
-<div class="dropdownRow">
-
-
-
-  <div class="dropdown" id="roleDropdown">
-
+  <img class="navbar" src="assets/elements/logos.png" alt="icon 1">
+  <p class="title">פרטים אישיים</p>
+  <form class="userForm" id="userForm">
+  <div class="topInputs">
+    <input type="number" id="personalNumber" placeholder="מספר אישי" required>
+    <input type="text" id="fullName" placeholder="שם מלא" required>
+  </div>
+  <div class="dropdownRow">
+    <div class="dropdown" id="roleDropdown">
     <div class="dropdownSelected">מחלקה</div>
-
     <div class="dropdownList">
-
       <div class="dropdownItem">1</div>
-
       <div class="dropdownItem">2</div>
-
       <div class="dropdownItem">3</div>
-
       <div class="dropdownItem">4</div>
-
     </div>
-
   </div>
 
-
-
   <div class="dropdown" id="branchDropdown">
-
     <div class="dropdownSelected">פלוגה</div>
-
     <div class="dropdownList">
       <div class="dropdownItem">אומץ</div>
       <div class="dropdownItem">ברק</div>
@@ -79,13 +43,8 @@
 
 
 </div>
-
     <!-- הספר = כפתור -->
-
-    <img src="assets/buttons/startBtn.png" class="bookSubmit"  onclick="submitForm()">
-
-
-
+    <p class="bookSubmit" onclick="submitForm()">למבחן</p>
 </form>
 
 

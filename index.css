@@ -12,7 +12,7 @@ body {
   min-height: 100vh;
   direction: rtl;
   font-family: Arial, sans-serif;
-  color: rgba(4, 37, 89, 1);
+  color: #432818;
   background-image: url('assets/images/background-img.svg');
 }
 
@@ -87,12 +87,24 @@ body {
     transform: translate(-50%, -50%);
     width: 80vw;
     margin: 0;
+    color: #6F1D1B;
 }
 
 .subtitle {
     position: absolute;
     font-size: 7vmin;
     top: 23vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin: 0;
+    color: #6F1D1B;
+}
+
+.other-sub {
+    position: absolute;
+    font-size: 4vmin;
+    top: 0vh;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -189,14 +201,10 @@ body {
 
 .userForm{
     position: absolute;
-    top: 65%;
+    top: 50vh;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: "hilel";
-
     width: 100vw;
-    max-width: 400px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -329,10 +337,8 @@ body {
 .dropdownRow{
     display: flex;
     gap: 12px;
-
     width: 95vw;
     max-width: 600px;
-
     margin: 0 auto;
 }
 
@@ -347,6 +353,7 @@ body {
     margin-top: 40px;
     cursor: pointer;
     transition: 0.3s;
+    text-align: center;
 }
 
 .bookSubmit:hover{
@@ -446,7 +453,41 @@ body {
   color: #EABA6B;
 }
 
-.sub1, .sub2, .sub3, .sub4, .sub5 {
+.sub {
+    /* position: absolute; */
+    /* transform: translate(-50%, -50%); */
+    width: 32vw;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    touch-action: manipulation;
+    transition: transform 0.15s ease, filter 0.15s ease;
+    height: 10vh;
+    background-color: #BB9457;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.subjects {
+    position: absolute;
+    top: 52vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2vw;
+    width: 85vw;
+    height: 56vh;
+    align-items: center;
+    justify-items: center;
+}
+
+/* .sub1, .sub2, .sub3, .sub4, .sub5 {
     position: absolute;
     transform: translate(-50%, -50%);
     width: 32vw;
@@ -457,17 +498,17 @@ body {
     touch-action: manipulation;
 
     transition: transform 0.15s ease, filter 0.15s ease;
-}
+} */
 
-.sub1:active,
+/* .sub1:active,
 .sub2:active,
 .sub3:active,
 .sub4:active,
 .sub5:active {
-    transform: translate(-50%, -50%) scale(0.92); /* 👈 התכווצות */
-    filter: brightness(0.85); /* 👈 כהה קצת */
-}
-
+    transform: translate(-50%, -50%) scale(0.92);
+    filter: brightness(0.85);
+} */
+/* 
 .sub1:active,
 .sub2:active,
 .sub3:active,
@@ -475,8 +516,14 @@ body {
 .sub5:active {
     transform: translate(-50%, -50%) scale(0.9);
     filter: brightness(0.8);
-} 
-.sub1 {
+} */
+
+.sub5 {
+    grid-column: 1 / 3;
+    justify-self: center;
+}
+
+/* .sub1 {
     position: absolute;
     top: 25%;
     left: 70%;
@@ -514,18 +561,29 @@ body {
     left: 70%;
     transform: translate(-50%, -50%);
     width: 32vw;
-}
+} */
 
 .test {
-    cursor: pointer;
+cursor: pointer;
     position: absolute;
-    top: 69%;
-    left: 30%;
+    top: 84vh;
+    left: 50%;
     transform: translate(-50%);
     -webkit-tap-highlight-color: transparent;
     user-select: none;
     touch-action: manipulation;
     transition: transform 0.3s ease, filter 0.3s ease;
+    font-size: 1.45rem;
+    background-color: #6F1D1B;
+    width: 26vw;
+    height: 8vh;
+    border-radius: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    color: white;
 }
 
 .test:hover {
@@ -617,12 +675,16 @@ body {
 
 .allSub {
     position: absolute;
-    position: absolute;
-    top: 95%;
-    left: 50%;
+    top: 8vh;
+    left: 45vw;
     cursor: pointer;
-    width: 95%;
-    transform: translate(-50%, -50%);
+    width: 47vw;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    height: 0vh;
 }
 
 .forwordBtn {
@@ -645,36 +707,54 @@ body {
 
 .textBg {
     position: absolute;
-    position: absolute;
     top: 56%;
     left: 50%;
     width: 70vw;
     transform: translate(-50%, -50%);
+    height: 62vh;
+    background-color: rgba(246, 207, 138, 1);
+    border-radius: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: column;
 }
 
 .text {
-    position: absolute;
     text-align: right;
-    top: 55%;
-    left: 50%;
     width: 68vw;
-    transform: translate(-50%, -50%);
     font-family: "hilel";
-    color: #03255A;
-    font-size: 1rem;
+    color: rgba(4, 37, 89, 1);
+    font-size: 1.2rem;
     direction: rtl;
+    padding: 2vh;
+    margin-top: 2vh;
+}
+
+.arrows {
+    width: 54vw;
+    position: absolute;
+    top: 92vh;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 .innerTitle {
     position: absolute;
     text-align: center;
-    top: 21%;
+    top: 19vh;
     left: 50%;
-    width: 100vw;
+    width: 84vw;
     transform: translate(-50%, -50%);
-    font-family: "BOLD";
-    color: #03255A;
-    font-size: 1.5rem;
+    /* font-family: "BOLD"; */
+    color: #6F1D1B;
+    font-size: 1.8rem;
     direction: rtl;
 }
 
@@ -690,20 +770,20 @@ body {
 }
 
 .options button {
-  background: #ddf3ff;
-    color: #03255A;
-
-  border: none;              /* מוריד מסגרת */
-  outline: none;             /* מוריד outline */
-  box-shadow: none;          /* מוריד הילה/צל */
-  width: 60vw;
-  border-radius: 14px;
-  /* padding: 12px 24px; */
-  font-size: 1.2rem;
-  font-family: "BOLD";
-  direction: rtl;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    background: #c78c63;
+    color: #432818;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 60vw;
+    border-radius: 14px;
+    /* padding: 12px 24px; */
+    font-size: 1.1rem;
+    direction: rtl;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 6vh;
+    font-family: hilel;
 }
 
 .options button:hover {
@@ -911,7 +991,7 @@ background-color: rgba(163, 11, 13, 0.5);
 }
 
 .backBtn {
-    margin-top: 2vw;
+    /* margin-top: 2vw; */
 
     background: none;
     border: none;

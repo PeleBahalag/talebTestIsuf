@@ -69,7 +69,10 @@ const quizData = {
       },
       {
         q: "תיק מדריך נכתב לכל לבנה מקצועית בהכרשה?",
-        answers: ['תיעוד של נתוני החניך בהכשרה לרבות מבחנים, משובים ודפי הערכה- נכון', 'תיעוד של נתוני החניך בהכשרה לרבות מבחנים, משובים ודפי הערכה- לא נכון', 'תיעוד של נתוני החניך בהכשרה לרבות מבחנים, משובים ודפי הערכה- נכון', 'תיעוד של נתוני החניך בהכשרה לרבות מבחנים, משובים ודפי הערכה'],
+        answers: ['תיעוד של נתוני החניך בהכשרה לרבות מבחנים, משובים ודפי הערכה- נכון',
+            'תיעוד של נתוני החניך בהכשרה לרבות מבחנים, משובים ודפי הערכה- לא נכון',
+            'תיעוד של נתוני החניך בהכשרה לרבות מבחנים, משובים ודפי הערכה- נכון',
+            'תיעוד של נתוני החניך בהכשרה לרבות מבחנים, משובים ודפי הערכה'],
         correct: 1
       },
       {
@@ -80,7 +83,10 @@ const quizData = {
       },
       {
         q: 'מהו תל"ב?',
-        answers: ["רישיון כשיר להכשיר", "מסמך המייצר אחידות בתהליכי הדרכה", "מסמך שמרכז את המענה הפיקודי", "מסמך המרכז את הנהלים למענה פיקודי בהכשרה"],
+        answers: ["רישיון כשיר להכשיר",
+            "מסמך המייצר אחידות בתהליכי הדרכה",
+            "מסמך שמרכז את המענה הפיקודי",
+            "מסמך המרכז את הנהלים למענה פיקודי בהכשרה"],
         correct: 2
       },
       {
@@ -115,19 +121,14 @@ setupDropdown("roleDropdown");
 setupDropdown("branchDropdown");
 
 function setupDropdown(dropdownId) {
-
     const dropdown = document.getElementById(dropdownId);
-
     if (!dropdown) return;
 
     const selected = dropdown.querySelector(".dropdownSelected");
-
     const list = dropdown.querySelector(".dropdownList");
-
     const items = dropdown.querySelectorAll(".dropdownItem");
 
     selected.onclick = () => {
-
         list.style.display =
             list.style.display === "block"
             ? "none"
@@ -135,26 +136,20 @@ function setupDropdown(dropdownId) {
     };
 
     items.forEach(item => {
-
         item.onclick = () => {
-
             selected.innerText = item.innerText;
-
             list.style.display = "none";
         };
     });
 
     document.addEventListener("click", (e) => {
-
         if (!dropdown.contains(e.target)) {
-
             list.style.display = "none";
         }
     });
 }
 
 function submitForm() {
-
     const role =
         document.querySelector("#roleDropdown .dropdownSelected")
         ?.innerText;
@@ -164,9 +159,7 @@ function submitForm() {
         ?.innerText;
 
     if (role === "תפקיד" || branch === "ענף") {
-
         alert("יש לבחור תפקיד וענף");
-
         return;
     }
 
@@ -185,13 +178,11 @@ function submitForm() {
     window.location.href = "test.html";
 }
 
-
 let currentIndex = 0;
 let score = 0;
 
 function openPopup(text) {
     document.getElementById("popupText").innerText = text;
-
     document.getElementById("popup").style.display = "block";
     document.getElementById("overlay").style.display = "block";
 }
@@ -203,50 +194,35 @@ function closePopup() {
 
 /* ---------------- QUIZ ---------------- */
 
-console.log(questions[0]);
+console.log(quizData.questions[0]);
 const questionText = document.getElementById("questionText");
-
 const answersContainer = document.getElementById("answersContainer");
-
 const currentQuestionSpan = document.getElementById("currentQuestion");
-
 const totalQuestionsSpan = document.getElementById("totalQuestions");
-
 let currentQuestionIndex = 0;
-
 let quizScore = 0;
 
 /* בדיקה שאנחנו באמת ב-test.html */
 if (window.location.pathname.includes("test.html")) {
-
     const userData = JSON.parse(localStorage.getItem("userData"));
 
     if (userData) {
-
         const role = userData.role;
-
         // const quiz = quizData[role];
         const quiz = quizData;
 
         if (quiz) {
-
             totalQuestionsSpan.innerText = quiz.questions.length;
-
             showQuestion();
         }
     }
 }
 
 function showQuestion() {
-
     const userData = JSON.parse(localStorage.getItem("userData"));
-
     // const role = userData.role;
-
     const quiz = quizData;
-
     const currentQuestion = quiz.questions[currentQuestionIndex];
-
     questionText.innerText = currentQuestion.q;
 
     if (currentQuestion.q.length > 55) {
@@ -256,27 +232,19 @@ function showQuestion() {
     }
 
     currentQuestionSpan.innerText = currentQuestionIndex + 1;
-
     answersContainer.innerHTML = "";
-
     const isMultiple = Array.isArray(currentQuestion.correct);
 
     currentQuestion.answers.forEach((answer, index) => {
-
         const button = document.createElement("button");
-
         button.classList.add("answerBtn");
-
         button.innerText = answer;
 
         if (isMultiple) {
-
             button.onclick = () => {
                 button.classList.toggle("selected");
             };
-
         } else {
-
             button.onclick = () => {
                 checkAnswer(index);
             };
@@ -286,74 +254,86 @@ function showQuestion() {
     });
 
     if (isMultiple) {
-
         const submitBtn = document.createElement("button");
-
         submitBtn.innerText = "בדיקה";
-
         submitBtn.classList.add("checkBtn");
-
         submitBtn.onclick = checkMultipleAnswers;
-
         answersContainer.appendChild(submitBtn);
     }
 }
 
 function checkAnswer(selectedIndex) {
-
     const userData = JSON.parse(localStorage.getItem("userData"));
-
     const role = userData.role;
-
     const quiz = quizData;
-
     const currentQuestion = quiz.questions[currentQuestionIndex];
-
     const allButtons = document.querySelectorAll(".answerBtn");
 
     allButtons.forEach(button => {
         button.classList.add("disabled");
     });
 
-    /* נכון */
-    if (selectedIndex === currentQuestion.correct) {
+function checkAnswer(selectedIndex) {
+    const quiz = quizData;
+    const currentQuestion = quiz.questions[currentQuestionIndex];
+    const allButtons = document.querySelectorAll(".answerBtn");
 
+    allButtons.forEach(button => {
+        button.classList.add("disabled");
+    });
+
+    // המרת התשובה הנכונה מאינדקס שמתחיל ב-1 לאינדקס שמתחיל ב-0
+    const correctIndex = currentQuestion.correct - 1;
+
+    if (selectedIndex === correctIndex) {
         allButtons[selectedIndex].classList.add("correct");
-
         quizScore += 5;
-    }
-
-    /* לא נכון */
-    else {
-
+    } else {
         allButtons[selectedIndex].classList.add("wrong");
-
-        allButtons[currentQuestion.correct].classList.add("correct");
+        allButtons[correctIndex]?.classList.add("correct");
     }
 
     sessionStorage.setItem("quizScore", quizScore);
 
-    /* מעבר אוטומטי לשאלה הבאה */
     setTimeout(() => {
-
         nextQuestion();
-
     }, 1500);
+    }
+    // /* נכון */
+    // if (selectedIndex === currentQuestion.correct) {
+
+    //     allButtons[selectedIndex].classList.add("correct");
+
+    //     quizScore += 5;
+    // }
+
+    // /* לא נכון */
+    // else {
+
+    //     allButtons[selectedIndex].classList.add("wrong");
+
+    //     allButtons[currentQuestion.correct].classList.add("correct");
+    // }
+
+    // sessionStorage.setItem("quizScore", quizScore);
+
+    // /* מעבר אוטומטי לשאלה הבאה */
+    // setTimeout(() => {
+
+    //     nextQuestion();
+
+    // }, 1500);
 }
+
 function nextQuestion() {
-
     const userData = JSON.parse(localStorage.getItem("userData"));
-
     const role = userData.role;
-
-    const quiz = quizData[role];
+    const quiz = quizData;
 
     currentQuestionIndex++;
 
     if (currentQuestionIndex >= quiz.questions.length) {
-
         showFinalPopup();
-
         return;
     }
 
@@ -361,23 +341,16 @@ function nextQuestion() {
 }
 
 function checkMultipleAnswers() {
-
     const userData = JSON.parse(localStorage.getItem("userData"));
-
     const role = userData.role;
-
-    const quiz = quizData[role];
-
+    const quiz = quizData;
     const currentQuestion = quiz.questions[currentQuestionIndex];
-
     const correctAnswers = currentQuestion.correct;
-
     const allButtons = document.querySelectorAll(".answerBtn");
 
     let selectedIndexes = [];
 
     allButtons.forEach((button, index) => {
-
         if (button.classList.contains("selected")) {
             selectedIndexes.push(index);
         }
@@ -390,7 +363,6 @@ function checkMultipleAnswers() {
         selectedIndexes.every(index => correctAnswers.includes(index));
 
     allButtons.forEach((button, index) => {
-
         if (correctAnswers.includes(index)) {
             button.classList.add("correct");
         }
@@ -408,24 +380,18 @@ function checkMultipleAnswers() {
 
     /* מעבר אוטומטי לשאלה הבאה */
     setTimeout(() => {
-
         nextQuestion();
-
     }, 1500);
 }
 
 function showFinalPopup() {
-
     const userData = JSON.parse(localStorage.getItem("userData"));
-
     const role = userData.role;
-
     const branch = userData.branch;
 
     let targetEmail = "";
 
     switch(branch) {
-
         case "חשיפה תקיפה":
             targetEmail = "guyleeneuman@gmail.com";
             break;
@@ -438,10 +404,8 @@ function showFinalPopup() {
             targetEmail = "guyleeneuman@gmail.com";
     }
 
-    const quiz = quizData[role];
-
+    const quiz = quizData;
     const totalQuestions = quiz.questions.length;
-
     const correctAnswersCount = quizScore / 5;
 
     /* חישוב אחוזים */
