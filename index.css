@@ -54,10 +54,10 @@ body {
     src: url("assets/fonts/hillel/hillel/hillelclm-medium-webfont.ttf");
 }
 
-@font-face {
+/* @font-face {
     font-family: "BOLD";
     src: url("assets/font/gadi-almog-regular-aaa.otf");
-} 
+}  */
 
 .navbar {
     position: absolute;
@@ -187,6 +187,7 @@ body {
     -webkit-tap-highlight-color: transparent;
     user-select: none;
     touch-action: manipulation;
+    font-family: "hilel";
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -564,7 +565,7 @@ body {
 } */
 
 .test {
-cursor: pointer;
+    cursor: pointer;
     position: absolute;
     top: 84vh;
     left: 50%;
@@ -605,6 +606,7 @@ cursor: pointer;
     left: 50%;
     z-index: 1000;
     transform: translate(-50%, -50%);
+    background-color: rgba(246, 207, 138, 1);
 }
 
 .popUpClose {
@@ -633,18 +635,24 @@ cursor: pointer;
 
     transform: translate(-50%, -50%);
     z-index: 1000;
+
+    width: 85vw;
+    height: 70vh;
+
+    display: flex;
 }
 
 /* הרקע שלך */
 .popUpbg {
     width: 85vw;
-    height: 70vh;
+    height: 54vh;
+    border-radius: 4vw;
 }
 
 /* טקסט על התמונה */
 .popUpText {
     position: absolute;
-    top: 3vh;
+    top: 24vh;
     left: 50%;
     transform: translate(-50%, -50%);
     direction: rtl;
@@ -652,19 +660,14 @@ cursor: pointer;
     text-align: center;
     z-index: 10000000;
     font-family: "hilel";
-    color: #03255A;
+    /* color: #03255A; */
     font-size: 1.2rem;
 }
 
 /* כפתור סגירה כתמונה */
 .popUpClose {
     position: absolute;
-    top: 25vh;
-    left: 50%;
-    transform: translateX(-50%);
-
-    width: 35vw;
-
+    top: 50vh;
     cursor: pointer;
     transition: 0.2s;
 }
@@ -707,11 +710,11 @@ cursor: pointer;
 
 .textBg {
     position: absolute;
-    top: 56%;
+    top: 60vh;
     left: 50%;
-    width: 70vw;
+    width: 72vw;
     transform: translate(-50%, -50%);
-    height: 62vh;
+    height: 72vh;
     background-color: rgba(246, 207, 138, 1);
     border-radius: 16px;
     display: flex;
@@ -731,12 +734,13 @@ cursor: pointer;
     direction: rtl;
     padding: 2vh;
     margin-top: 2vh;
+    line-height: 1.25;
 }
 
 .arrows {
-    width: 54vw;
+    width: 62vw;
     position: absolute;
-    top: 92vh;
+    top: 91vh;
     left: 50%;
     transform: translate(-50%);
     display: flex;
@@ -794,15 +798,15 @@ cursor: pointer;
 
 .questionCounter {
     position: absolute;
-    top: 9%;
+    top: 4vh;
     left: 75%;
     background-color: rgba(234, 186, 107, 0.7);
     color: #03255A;
     padding: 5px 10px;
     border-radius: 10px;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
 
-    font-family: "BOLD";
+    /* font-family: "BOLD"; */
     box-shadow: 0 4px 12px rgba(3, 37, 90, 0.35);
 }
 
@@ -810,15 +814,15 @@ cursor: pointer;
 .questionTitle {
     position: absolute;
     text-align: center;
-    margin-top: 16vh;
-      left: 50%;
-  transform: translateX(-50%);
-    color: #03255A;
-    font-family: "BOLD";
+    margin-top: 12vh;
+    left: 50%;
+    transform: translateX(-50%);
+    /* color: #03255A; */
+    /* font-family: "BOLD"; */
     width: 95vw;
     row-gap: 1vh;
     font-weight: lighter;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     direction: rtl;
 }
 
@@ -826,7 +830,7 @@ cursor: pointer;
 .answersContainer {
     position: absolute;
     width: 100vw;
-    top: 35vh;
+    top: 28vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -840,20 +844,23 @@ cursor: pointer;
     width: 87vw;
     height: 9vh;
     background-color: rgba(234, 186, 107, 0.7);
-    color: #03255A;
+    /* color: #03255A; */
     border: none;
     transition: 0.3s;
     font-size: 1rem;
     direction: rtl;
-
+    fonrt-family: "hilel";
 }
+
 .answersContainer button {
     border-radius: 16px;        /* פינות מעוגלות */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* צל */
     border: none;              /* מוריד מסגרת ברירת מחדל */
-    padding:5px 10px;
+    padding: 5px 10px;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-family: "hilel";
+    font-size: 1.25rem;
 }
 
 /* אפקט מעבר נחמד כשעוברים עם עכבר */
@@ -888,10 +895,9 @@ background-color: rgba(163, 11, 13, 0.5);
     cursor: pointer;
 }
 
-.smallQuestion {
+/* .smallQuestion {
     font-size:1rem;
-
-}
+} */
 
 .answerBtn.selected {
     color: #111;
@@ -986,7 +992,7 @@ background-color: rgba(163, 11, 13, 0.5);
 
 .endScore span {
     font-size: 2.3vw;
-    font-family: "BOLD";
+    /* font-family: "BOLD"; */
     color: #FFD54A;
 }
 
@@ -1025,33 +1031,37 @@ background-color: rgba(163, 11, 13, 0.5);
 .endText span {
     color: #03255A;
     font-size: 3rem;
-    font-family: "BOLD";
+    /* font-family: "BOLD"; */
 }
 
 .popUpTextEnd {
     position: absolute;
-    top: 0vh;
+    top: 16vh;
     left: 50%;
     transform: translate(-50%, -50%);
     direction: rtl;
     width: 80vw;
     text-align: center;
     z-index: 10000000;
-   color: #03255A;
+    color: #03255A;
     font-size: 2rem;
-    font-family: "BOLD";
+    /* font-family: "BOLD"; */
 }
 
 .retryText {
     position: absolute;
-    top: 17vh;
+    top: 36vh;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000000000000;
     font-size: 1rem;
     font-family: "hilel";
- width: 85vw;
+    width: 85vw;
     color: #03255A;
 
     text-align: center;
+}
+
+.endScore {
+    font-size: 1.8rem !important;
 }
