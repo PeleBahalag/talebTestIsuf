@@ -141,7 +141,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 8vmin;
-    background-color: rgb(183 111 100);
+    background-color: #BC6C25;
     color: rgb(255 255 255);
     width: 28vw;
     height: 16vh;
@@ -464,8 +464,8 @@ body {
     touch-action: manipulation;
     transition: transform 0.15s ease, filter 0.15s ease;
     height: 10vh;
-    background-color: #BB9457;
-    border-radius: 8px;
+    background-color: #DDA15E;
+    border-radius: 4vw;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -575,16 +575,16 @@ body {
     touch-action: manipulation;
     transition: transform 0.3s ease, filter 0.3s ease;
     font-size: 1.45rem;
-    background-color: #6F1D1B;
+    background-color: #BC6C25;
     width: 26vw;
     height: 8vh;
-    border-radius: 32px;
+    border-radius: 4vw;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     align-content: center;
-    color: white;
+    color: #FEFAE0;
 }
 
 .test:hover {
@@ -710,7 +710,7 @@ body {
 
 .textBg {
     position: absolute;
-    top: 60vh;
+    top: 54vh;
     left: 50%;
     width: 72vw;
     transform: translate(-50%, -50%);
@@ -740,7 +740,7 @@ body {
 .arrows {
     width: 62vw;
     position: absolute;
-    top: 91vh;
+    top: 66vh;
     left: 50%;
     transform: translate(-50%);
     display: flex;
@@ -752,7 +752,7 @@ body {
 .innerTitle {
     position: absolute;
     text-align: center;
-    top: 19vh;
+    top: 14vh;
     left: 50%;
     width: 84vw;
     transform: translate(-50%, -50%);
