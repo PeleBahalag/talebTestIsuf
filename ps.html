@@ -15,24 +15,15 @@
       <img class="icons" src="assets/images/bahalagIcon.png" alt="bahalag icon">
     </nav>
     <p class="title">פרטים אישיים</p>
+
     <form class="userForm" id="userForm">
-    <div class="topInputs">
-      <input type="number" id="personalNumber" placeholder="מספר אישי" required>
-      <input type="text" id="fullName" placeholder="שם מלא" required>
-    </div>
-    <div class="dropdownRow">
-      <div class="dropdown" id="roleDropdown">
-      <div class="dropdownSelected">מחלקה</div>
-      <div class="dropdownList">
-        <div class="dropdownItem">1</div>
-        <div class="dropdownItem">2</div>
-        <div class="dropdownItem">3</div>
-        <div class="dropdownItem">4</div>
-      </div>
-    </div>
+    <input type="text" id="fullName" class="dropdownSelected" placeholder="שם מלא" required>
+    <input type="number" id="personalNumber" class="dropdownSelected" placeholder="מספר אישי" required>
 
     <div class="dropdown" id="branchDropdown">
-      <div class="dropdownSelected">פלוגה</div>
+      <div class="dropdownSelected">פלוגה
+        <img class="dropdownIcon" src="assets/images/drop-down.svg" alt="dropdown icon">
+      </div>
       <div class="dropdownList">
         <div class="dropdownItem">אומץ</div>
         <div class="dropdownItem">ברק</div>
@@ -42,9 +33,20 @@
         <div class="dropdownItem">ונוס</div>
       </div>
     </div>
+
+    <div class="dropdown" id="roleDropdown">
+      <div class="dropdownSelected">מחלקה
+        <img class="dropdownIcon" src="assets/images/drop-down.svg" alt="dropdown icon">
+      </div>
+      <div class="dropdownList">
+        <div class="dropdownItem">1</div>
+        <div class="dropdownItem">2</div>
+        <div class="dropdownItem">3</div>
+        <div class="dropdownItem">4</div>
+      </div>
     </div>
-        <!-- הספר = כפתור -->
-        <p class="bookSubmit" onclick="submitForm()">למבחן</p>
+
+    <p class="bookSubmit test" onclick="submitForm()">למבחן</p>
     </form>
 
     <script src="main.js"></script>
