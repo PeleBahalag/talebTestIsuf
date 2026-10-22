@@ -24,16 +24,16 @@ const texts = {
             content: "תו התקן לאיכות בהכשרה יסודות מנצחים נכתב מתוך הצורך ליצור סטנדרט אחיד בתהליכי הליבה המרכזיים ביחידות ההדרכה. תו התקן מיועד בראש ובראשונה למפקדים בהכשרות, ומהווה 'מורה נבוכים' לתהליכי ההדרכה המחייבים בהכשרות. תו תקן זה שואב את השראתו מהתלב המטכלי אשר פועל אל מול כלל יחידות ההכשרה בצה''ל. נהלי תו התקן מהווים פקודה מחייבת לכלל ההכשרות."
         },
         {
-        title: "לחץ על הנוהל עליו תרצה ללמוד",
-        content: "",
-        options: [
-        {text: "1.2 - שעון פעילות", goTo: 2},
-        {text: "1.5 - תקופת התארגנות", goTo: 3},
-        {text: "1.6 - סיכומים עיתיים במהלך ההכשרה", goTo: 6},
-        {text: "1.7 - תקופת ההדרכה", goTo: 11},
-        {text: "1.10 - ניהול מידע הדרכתי", goTo: 25},
-        {text: "1.11 - ניהול הכשרה בקמפוס הדיגיטלי", goTo: 28}
-    ]
+            title: "לחץ על הנוהל עליו תרצה ללמוד",
+            content: "",
+            options: [
+                { text: "1.2 - שעון פעילות", goTo: 2 },
+                { text: "1.5 - תקופת התארגנות", goTo: 3 },
+                { text: "1.6 - סיכומים עיתיים במהלך ההכשרה", goTo: 6 },
+                { text: "1.7 - תקופת ההדרכה", goTo: 11 },
+                { text: "1.10 - ניהול מידע הדרכתי", goTo: 25 },
+                { text: "1.11 - ניהול הכשרה בקמפוס הדיגיטלי", goTo: 28 }
+            ]
         },
         {
             title: "נוהל 1.2 - שעון פעילות",
@@ -137,7 +137,7 @@ const texts = {
         },
         {
             title: "נוהל 1.10 - ניהול מידע הדרכתי",
-            content: "פירוט המידע ואופן ניהולו: \n 4) סיכומי תפקידים לכלל המפקדים ישמרו ל-5 שנים על ידי השלישה. \n 5) דוחות הערכת הכשרה ישמרו ל-5 שנים על ידי הקה''דית.\n 6) דוחות אחרית ישמרו לשנתיים על ידי השלישה.\n 7) תיקי חניכה נשמרים לשנתיים על ידי ק. הקורס בבקרת רמ''דים/על ידי רמ''דים בבקרת ממ''גים." 
+            content: "פירוט המידע ואופן ניהולו: \n 4) סיכומי תפקידים לכלל המפקדים ישמרו ל-5 שנים על ידי השלישה. \n 5) דוחות הערכת הכשרה ישמרו ל-5 שנים על ידי הקה''דית.\n 6) דוחות אחרית ישמרו לשנתיים על ידי השלישה.\n 7) תיקי חניכה נשמרים לשנתיים על ידי ק. הקורס בבקרת רמ''דים/על ידי רמ''דים בבקרת ממ''גים."
         },
         {
             title: "נוהל 1.11 - ניהול הכרשה בקמפוס הדיגיטלי",
@@ -153,9 +153,9 @@ const texts = {
             title: "לחץ על הנוהל עליו תרצה ללמוד",
             content: "",
             options: [
-        {text: "2.3 - הערכת חניכים", goTo: 1},
-        {text: "2.4 - תיקי מדריך", goTo: 4},
-    ]
+                { text: "2.3 - הערכת חניכים", goTo: 1 },
+                { text: "2.4 - תיקי מדריך", goTo: 4 },
+            ]
         },
         {
             title: "נוהל 2.3 - הערכת חניכים (מבחנים בהכשרות)",
@@ -183,11 +183,11 @@ const texts = {
             title: "לחץ על הנוהל עליו תרצה ללמוד",
             content: "",
             options: [
-        {text: "3.1 - הגדרות תפקידים לסגלי הדרכה", goTo: 1},
-        {text: "3.4 - פיתוח והערכת מפקדים", goTo: 5},
-        {text: "3.6 - תחלופת סגל ורשיון להדריך", goTo: 7},
-        {text: "3.7 - הרחקת איש סגל", goTo: 10},
-    ]
+                { text: "3.1 - הגדרות תפקידים לסגלי הדרכה", goTo: 1 },
+                { text: "3.4 - פיתוח והערכת מפקדים", goTo: 5 },
+                { text: "3.6 - תחלופת סגל ורשיון להדריך", goTo: 7 },
+                { text: "3.7 - הרחקת איש סגל", goTo: 10 },
+            ]
         },
         {
             title: "נוהל 3.1 - הגדרות תפקידים לסגלי הדרכה",
@@ -238,17 +238,17 @@ const texts = {
             content: "תהליך סיום תפקיד עקב פער בביצוע התפקיד: \n דיווח לרמ''ד במהלך המחזור על איש סגל שאינו מתאים לתפקידו, שיחת משוב ובניית תכנית ליווי וחניכה עם זיהוי הפער, וועדת רע''ן והודעה על קיום שימוע ברשות המח''ט בסיום תקופת הניסיון, וועדת מח''ט ובסופה מסירת החלטה לאיש הסגל עד שבוע מוועדת הרע''ן, וועדה ברשות קחצ''ר/מז''י (לקצינים ונגדים) עד שבטווח מוועדת המח''ט, הודעה למורחק בעת הוועדה."
         },
     ],
- sub3: [
+    sub3: [
         {
             title: "לחץ על הנוהל עליו תרצה ללמוד",
             content: "",
             options: [
-        {text: "4.1 - טיפול בחניך מתקשה", goTo: 1},
-        {text: "4.2 - וועדות הערכה לחניך", goTo: 4},
-        {text: "4.3 - בחי''רת חניך מצטיין וחניך למופת", goTo: 6},
-        {text: "4.4 - תיק אישי לחניך", goTo: 8},
-        {text: "4.5 - העברת מקל", goTo: 11},
-    ]
+                { text: "4.1 - טיפול בחניך מתקשה", goTo: 1 },
+                { text: "4.2 - וועדות הערכה לחניך", goTo: 4 },
+                { text: "4.3 - בחי''רת חניך מצטיין וחניך למופת", goTo: 6 },
+                { text: "4.4 - תיק אישי לחניך", goTo: 8 },
+                { text: "4.5 - העברת מקל", goTo: 11 },
+            ]
         },
         {
             title: "נוהל 4.1 - טיפול בחניך מתקשה",
@@ -294,18 +294,18 @@ const texts = {
             title: "נוהל 4.5 - העברת מקל",
             content: "אופן ביצוע העברת מקל: \n בהכשרות קורס המ''כים העברת מקל תתבצע במסגרת שיח פיזי או טלפוני בדרג של מ''פ מול מ''פ לצורך העמקה בנתוני הדו''ח שהועבר ליחידת המשך. כל מידע בדו''ח העברת מקל יאושר על ידי מפקד ברמת מ''פ/רמ''ד. יש לשקף לחייל את תוכן דו''ח העברת מקל ולאפשר לו להשמיע את בקשותיו בהקשר למידע המועבר אודותיו. העברת מקל תתבצע טרם קליטתו של החייל ביחידה החדשה ולא יוקדם משבועיים טרם סיום ההכשרה."
         },
-        
+
     ],
-     sub5: [
+    sub5: [
         {
             title: "לחץ על הנוהל עליו תרצה ללמוד",
             content: "",
             options: [
-        {text: "5.2 - קליטת אמלח ביחידת הדרכה", goTo: 1},
-        {text: "רמות הטמעת התלב", goTo: 3},
-        {text: "דרכי הטמעה ותחזוקה", goTo: 4},
-     
-    ]
+                { text: "5.2 - קליטת אמלח ביחידת הדרכה", goTo: 1 },
+                { text: "רמות הטמעת התלב", goTo: 3 },
+                { text: "דרכי הטמעה ותחזוקה", goTo: 4 },
+
+            ]
         },
         {
             title: "נוהל 5.2 - קליטת אמל''ח ביחידת הדרכה",
@@ -323,7 +323,7 @@ const texts = {
             title: "דרכי הטמעה ותחזוקה",
             content: "שעון תל''ב ותיאום בלו''זים - לשזור מופעי תל''ב בלו''ז ענפי/גדודי. שימוש במבזקוני למידה. ביקורות פנימיות ושיחות חתך, הדרכה וחניכת בעלי תפקידים, ריענונים תקופתיים, תיקוף נהלים קיימים, התאמת נהלים לשטח - מה שכתוב קורה, מה שקורה כתוב! יצירת פורמטיקה לנהלים שונים."
         },
-        
+
     ],
     // שאר הנושאים אותו רעיון
 };
@@ -331,8 +331,25 @@ const texts = {
 // SELECT SUBJECT (study.html)
 // -----------------------------
 
+// function selectSub(subName) {
+//     sessionStorage.setItem("selectedSub", subName);
+//     window.location.href = "text.html";
+// }
+
 function selectSub(subName) {
+    // שמירת הנושא שנבחר
     sessionStorage.setItem("selectedSub", subName);
+
+    // שמירת הנושא כנושא שכבר ביקרו בו
+    const visitedSubs = JSON.parse(
+        sessionStorage.getItem("visitedSubs") || "[]"
+    );
+
+    if (!visitedSubs.includes(subName)) {
+        visitedSubs.push(subName);
+        sessionStorage.setItem("visitedSubs", JSON.stringify(visitedSubs));
+    }
+
     window.location.href = "text.html";
 }
 
@@ -344,12 +361,49 @@ document.querySelector(".subsDiv4")?.addEventListener("click", () => selectSub("
 document.querySelector(".subsDiv5")?.addEventListener("click", () => selectSub("sub5"));
 
 
+function updateVisitedSubs() {
+    const visitedSubs = JSON.parse(
+        sessionStorage.getItem("visitedSubs") || "[]"
+    );
+
+    visitedSubs.forEach(subName => {
+        const number = subName.replace("sub", "");
+        const checkmark = document.getElementById(`beenHere${number}`);
+
+        if (checkmark) {
+            checkmark.style.display = "block";
+        }
+    });
+}
+
+// הצגת הסימונים בכניסה לעמוד הנושאים
+if (document.querySelector(".subjects")) {
+    updateVisitedSubs();
+}
+
 // -----------------------------
 // TEXT PAGE (text.html)
 // -----------------------------
 
 let currentIndex = 0;
 let currentTexts = [];
+
+const arrows = document.querySelectorAll('.forwordBtn, .backBtn');
+
+arrows.forEach(arrow => {
+    arrow.addEventListener('touchend', function (e) {
+        let now = (new Date()).getTime();
+        let lastTouch = arrow.getAttribute('data-last-touch') || now;
+        let delta = now - lastTouch;
+
+        if (delta < 300 && delta > 0) {
+            e.preventDefault();
+        }
+
+        arrow.setAttribute('data-last-touch', now);
+    }, { passive: false });
+});
+
 
 function initTextPage() {
     const sub = sessionStorage.getItem("selectedSub");

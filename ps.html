@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>בוחן ולמידה - יסודות מנצחים</title>
-    <link rel="icon" type="image/png" href="assets/images/books.svg">
-    <link rel="stylesheet" href="index.css">
-  </head>
 
-  <body>
-    <nav class="navbar">
-      <img class="icons" src="assets/images/peleIcon.png" alt="pele icon">
-      <img class="icons" src="assets/images/isuf.png" alt="isuf icon">
-      <img class="icons" src="assets/images/bahalagIcon.png" alt="bahalag icon">
-    </nav>
-    <p class="title">פרטים אישיים</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>בוחן ולמידה - יסודות מנצחים</title>
+  <link rel="icon" type="image/png" href="assets/images/books.svg">
+  <link rel="stylesheet" href="index.css">
+</head>
 
-    <form class="userForm" id="userForm">
+<body>
+  <nav class="navbar">
+    <img class="icons" src="assets/images/peleIcon.png" alt="pele icon">
+    <img class="icons" src="assets/images/isuf.png" alt="isuf icon">
+    <img class="icons" src="assets/images/bahalagIcon.png" alt="bahalag icon">
+  </nav>
+  <p class="title">פרטים אישיים</p>
+
+  <form class="userForm" id="userForm">
     <input type="text" id="fullName" class="dropdownSelected" placeholder="שם מלא" required>
     <input type="number" id="personalNumber" class="dropdownSelected" placeholder="מספר אישי" required>
 
@@ -47,12 +48,13 @@
     </div>
 
     <p class="bookSubmit test" onclick="submitForm()">למבחן</p>
-    </form>
+  </form>
 
-    <script src="main.js"></script>
-  </body>
+  <script src="main.js"></script>
+</body>
 
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-  <script>emailjs.init("EpaOeeO37lgg5m9SS");</script>
+<script>emailjs.init("EpaOeeO37lgg5m9SS");</script>
+
 </html>
